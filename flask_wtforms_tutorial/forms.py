@@ -31,8 +31,8 @@ class StockForm(FlaskForm):
                 continue
         return stockChoices
 
-    symbol = SelectField("Choose Stock Symbol",[DataRequired()],
-        choices = getStockData(),
+    stockSymbol = SelectField("Choose Stock Symbol",[DataRequired()],
+        stockChoices = getStockData(),
     )
 
     chart_type = SelectField("Select Chart Type",[DataRequired()],
